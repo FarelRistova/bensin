@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelian</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="s.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4"> <i class='bx bxs-gas-pump'></i> Shell Purchase <i class='bx bxs-gas-pump'></i></h3>
+                        <br>
+                        <h6>
+                            Shell Super - 15.000
+                            <br>
+                            Shell V-Power - 16.000
+                            <br>
+                            Shell V-Power Diesel  - 18.000
+                            <br>
+                            Shell V-Power Nitro - 17.000
+                        </h6>
+                        <p>Note!! setiap pembelian di kenai biaya pajak 10%</p>
+                        <form method="POST" action="process.php">
+                            <div class="form-group">
+                                <label for="jenis"><b>Jenis Shell:</b></label>
+                                <select name="jenis" id="jenis" class="form-control" required>
+                                    <option value="" disabled selected>Silakan pilih jenis shell!</option>
+                                    <option value="Shell Super">Shell Super</b></option>
+                                    <option value="Shell V-Power">Shell V-Power</option>
+                                    <option value="Shell V-Power Diesel">Shell V-Power Diesel</option>
+                                    <option value="Shell V-Power Nitro">Shell V-Power Nitro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="jumlah"><b>Jumlah:</b></label>
+                                <input type="number" name="jumlah" id="jumlah" class="form-control" required min="1">
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class='bx bx-cart-add'></i> Order    
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
